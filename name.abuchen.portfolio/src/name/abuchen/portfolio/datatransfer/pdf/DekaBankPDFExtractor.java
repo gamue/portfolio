@@ -586,7 +586,7 @@ public class DekaBankPDFExtractor extends AbstractPDFExtractor
                 .assign((t, v) -> {
                     t.setSecurity(getOrCreateSecurity(v));
 
-                    v.getTransactionContext().put(FAILURE, Messages.MsgErrorTransactionTypeNotSupportedOrRequired);
+                    v.markAsFailure(Messages.MsgErrorTransactionTypeNotSupportedOrRequired);
                     t.setCurrencyCode(CurrencyUnit.EUR);
                     t.setAmount(0L);
                 })
@@ -612,14 +612,7 @@ public class DekaBankPDFExtractor extends AbstractPDFExtractor
                 .match("^.* (?<note>Auftragsnummer: .*)$")
                 .assign((t, v) -> t.setNote(trim(v.get("note"))))
 
-                .wrap((t, ctx) -> {
-                    TransactionItem item = new TransactionItem(t);
-
-                    if (ctx.getString(FAILURE) != null)
-                        item.setFailureMessage(ctx.getString(FAILURE));
-
-                    return item;
-                });
+                .wrap(TransactionItem::new);
     }
 
     public void addDepotStatementTransaction()
@@ -902,7 +895,7 @@ public class DekaBankPDFExtractor extends AbstractPDFExtractor
                                             t.setType(PortfolioTransaction.Type.SELL);
 
                                         if ("Storno Lastschrifteinzug".equals(v.get("type")))
-                                            v.getTransactionContext().put(FAILURE, Messages.MsgErrorTransactionOrderCancellationUnsupported);
+                                            v.markAsFailure(Messages.MsgErrorTransactionOrderCancellationUnsupported);
 
                                         SecurityListHelper securityListHelper = context.getType(SecurityListHelper.class).orElseGet(SecurityListHelper::new);
                                         Optional<SecurityItem> securityItem = securityListHelper.findItemByLineNoStart(v.getStartLineNumber());
@@ -1010,7 +1003,7 @@ public class DekaBankPDFExtractor extends AbstractPDFExtractor
                                             t.setType(PortfolioTransaction.Type.SELL);
 
                                         if ("Storno Lastschrifteinzug".equals(v.get("note")))
-                                            v.getTransactionContext().put(FAILURE, Messages.MsgErrorTransactionOrderCancellationUnsupported);
+                                            v.markAsFailure(Messages.MsgErrorTransactionOrderCancellationUnsupported);
 
                                         SecurityListHelper securityListHelper = context.getType(SecurityListHelper.class).orElseGet(SecurityListHelper::new);
                                         Optional<SecurityItem> securityItem = securityListHelper.findItemByLineNoStart(v.getStartLineNumber());
@@ -1314,7 +1307,7 @@ public class DekaBankPDFExtractor extends AbstractPDFExtractor
                                         DocumentContext context = type.getCurrentContext();
 
                                         if ("Ertragsausschüttung-Storno".equals(v.get("type")))
-                                            v.getTransactionContext().put(FAILURE, Messages.MsgErrorTransactionOrderCancellationUnsupported);
+                                            v.markAsFailure(Messages.MsgErrorTransactionOrderCancellationUnsupported);
 
                                         SecurityListHelper securityListHelper = context.getType(SecurityListHelper.class).orElseGet(SecurityListHelper::new);
                                         SharesListHelper sharesListHelper = context.getType(SharesListHelper.class).orElseGet(SharesListHelper::new);
@@ -1382,7 +1375,7 @@ public class DekaBankPDFExtractor extends AbstractPDFExtractor
                                         DocumentContext context = type.getCurrentContext();
 
                                         if ("Ertragsausschüttung-Storno".equals(v.get("type")))
-                                            v.getTransactionContext().put(FAILURE, Messages.MsgErrorTransactionOrderCancellationUnsupported);
+                                            v.markAsFailure(Messages.MsgErrorTransactionOrderCancellationUnsupported);
 
                                         SecurityListHelper securityListHelper = context.getType(SecurityListHelper.class).orElseGet(SecurityListHelper::new);
                                         SharesListHelper sharesListHelper = context.getType(SharesListHelper.class).orElseGet(SharesListHelper::new);
