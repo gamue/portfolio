@@ -566,7 +566,7 @@ public class ScalableCapitalPDFExtractor extends AbstractPDFExtractor
                         .match("^[\\d]{2}\\.[\\d]{2}\\.[\\d]{4} (?<date>[\\d]{2}\\.[\\d]{2}\\.[\\d]{4}).*" //
                                         + "(?<type>[\\-|\\+])(?<amount>[\\.,\\d]+) (?<currency>[A-Z]{3}).*$") //
                         .assign((t, v) -> {
-                         v.getTransactionContext().put(FAILURE, Messages.MsgErrorTransactionAlternativeDocumentRequired);
+                         v.markAsFailure(Messages.MsgErrorTransactionAlternativeDocumentRequired);
 
                          // Is type --> "-" change from INTEREST to INTEREST_CHARGE
                             if ("-".equals(v.get("type")))
@@ -577,14 +577,7 @@ public class ScalableCapitalPDFExtractor extends AbstractPDFExtractor
                             t.setAmount(asAmount(v.get("amount")));
                         })
 
-                        .wrap((t, ctx) -> {
-                            var item = new TransactionItem(t);
-
-                            if (ctx.getString(FAILURE) != null)
-                                item.setFailureMessage(ctx.getString(FAILURE));
-
-                            return item;
-                        }));
+                        .wrap(TransactionItem::new));
     }
 
     private void addTaxAdjustmentTransaction()

@@ -297,7 +297,7 @@ public class SBrokerPDFExtractor extends AbstractPDFExtractor
                         // @formatter:on
                         .section("type").optional() //
                         .match("^(?<type>Storno) unserer Ertr.gnisgutschrift .*$") //
-                        .assign((t, v) -> v.getTransactionContext().put(FAILURE, Messages.MsgErrorTransactionOrderCancellationUnsupported))
+                        .assign((t, v) -> v.markAsFailure(Messages.MsgErrorTransactionOrderCancellationUnsupported))
 
                         // @formatter:off
                         // If we have a positive amount and a gross reinvestment,
@@ -455,7 +455,7 @@ public class SBrokerPDFExtractor extends AbstractPDFExtractor
                                                                 var fxAmount = Money.of(asCurrencyCode(t.getSecurity().getCurrencyCode()), t.getMonetaryAmount().getAmount());
                                                                 t.addUnit(new Unit(Unit.Type.GROSS_VALUE, t.getMonetaryAmount(), fxAmount, BigDecimal.ONE));
 
-                                                                v.getTransactionContext().put(FAILURE, Messages.MsgErrorTransactionTypeNotSupportedOrRequired);
+                                                                v.markAsFailure(Messages.MsgErrorTransactionTypeNotSupportedOrRequired);
                                                             }
                                                         }))
 
@@ -595,9 +595,6 @@ public class SBrokerPDFExtractor extends AbstractPDFExtractor
                             // If we have a gross reinvestment, then the "noTax"
                             // flag must be removed.
                             type.getCurrentContext().remove("noTax");
-
-                            if (ctx.getString(FAILURE) != null)
-                                item.setFailureMessage(ctx.getString(FAILURE));
 
                             return item;
                         });
