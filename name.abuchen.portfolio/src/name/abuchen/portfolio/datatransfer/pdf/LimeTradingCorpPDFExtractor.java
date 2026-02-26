@@ -104,7 +104,7 @@ public class LimeTradingCorpPDFExtractor extends AbstractPDFExtractor
 
                             // if CUSIP lenght != 9
                             if (v.get("wkn").length() != 9)
-                                v.getTransactionContext().put(FAILURE, "CUSIP is maybe incorrect. " + t.getPortfolioTransaction().getDateTime() + " " + t.getPortfolioTransaction().getSecurity());
+                                v.markAsFailure("CUSIP is maybe incorrect. " + t.getPortfolioTransaction().getDateTime() + " " + t.getPortfolioTransaction().getSecurity());
                             else
                                 t.setSecurity(getOrCreateSecurity(v));
                         })
@@ -164,7 +164,7 @@ public class LimeTradingCorpPDFExtractor extends AbstractPDFExtractor
 
                                                             // if CUSIP lenght != 9
                                                             if (v.get("wkn").length() != 9)
-                                                                v.getTransactionContext().put(FAILURE, "CUSIP is maybe incorrect. " + t.getDateTime() + " " + t.getSecurity());
+                                                                v.markAsFailure("CUSIP is maybe incorrect. " + t.getDateTime() + " " + t.getSecurity());
                                                             else
                                                                 t.setSecurity(getOrCreateSecurity(v));
 
@@ -188,7 +188,7 @@ public class LimeTradingCorpPDFExtractor extends AbstractPDFExtractor
 
                                                             // if CUSIP lenght != 9
                                                             if (v.get("wkn").length() != 9)
-                                                                v.getTransactionContext().put(FAILURE, "CUSIP is maybe incorrect. " + t.getDateTime() + " " + t.getSecurity());
+                                                                v.markAsFailure("CUSIP is maybe incorrect. " + t.getDateTime() + " " + t.getSecurity());
                                                             else
                                                                 t.setSecurity(getOrCreateSecurity(v));
 
@@ -212,7 +212,7 @@ public class LimeTradingCorpPDFExtractor extends AbstractPDFExtractor
 
                                                             // if CUSIP lenght != 9
                                                             if (v.get("wkn").length() != 9)
-                                                                v.getTransactionContext().put(FAILURE, "CUSIP is maybe incorrect. " + t.getDateTime() + " " + t.getSecurity());
+                                                                v.markAsFailure("CUSIP is maybe incorrect. " + t.getDateTime() + " " + t.getSecurity());
                                                             else
                                                                 t.setSecurity(getOrCreateSecurity(v));
                                                         }))
@@ -255,7 +255,7 @@ public class LimeTradingCorpPDFExtractor extends AbstractPDFExtractor
 
                                                             // if CUSIP lenght != 9
                                                             if (v.get("wkn").length() != 9)
-                                                                v.getTransactionContext().put(FAILURE, "CUSIP is maybe incorrect. " + t.getDateTime() + " " + t.getSecurity());
+                                                                v.markAsFailure("CUSIP is maybe incorrect. " + t.getDateTime() + " " + t.getSecurity());
                                                             else
                                                                 t.setSecurity(getOrCreateSecurity(v));
                                                         })

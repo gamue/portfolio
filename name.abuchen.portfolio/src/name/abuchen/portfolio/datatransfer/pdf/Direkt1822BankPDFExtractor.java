@@ -510,7 +510,7 @@ public class Direkt1822BankPDFExtractor extends AbstractPDFExtractor
                         .match("(?<name1>.*)$") //
                         .match("Valuta (?<date>[\\d]{2}\\.[\\d]{2}\\.[\\d]{4}).*") //
                         .assign((t, v) -> {
-                            v.getTransactionContext().put(FAILURE, Messages.MsgErrorTransactionTypeNotSupportedOrRequired);
+                            v.markAsFailure(Messages.MsgErrorTransactionTypeNotSupportedOrRequired);
 
                             if (!v.get("name1").startsWith("Wertpapierrechnung"))
                                 v.put("name", trim(v.get("name")) + " " + trim(v.get("name1")));
@@ -523,14 +523,7 @@ public class Direkt1822BankPDFExtractor extends AbstractPDFExtractor
                             t.setAmount(0L);
                         })
 
-                        .wrap((t, ctx) -> {
-                            var item = new TransactionItem(t);
-
-                            if (ctx.getString(FAILURE) != null)
-                                item.setFailureMessage(ctx.getString(FAILURE));
-
-                            return item;
-                        });
+                        .wrap(TransactionItem::new);
     }
 
     private <T extends Transaction<?>> void addTaxesSectionsTransaction(T transaction, DocumentType type)
