@@ -1776,10 +1776,7 @@ public class TradeRepublicPDFExtractor extends AbstractPDFExtractor
                             t.setNote(v.get("note"));
                         })
 
-                        .wrap((t, ctx) -> {
-                            var item = new TransactionItem(t);
-                            return item;
-                        });
+                        .wrap(TransactionItem::new);
     }
 
     private void addExAnteFeeTransaction()
@@ -3625,10 +3622,7 @@ public class TradeRepublicPDFExtractor extends AbstractPDFExtractor
                                                             checkAndSetGrossUnit(gross, fxGross, t, type.getCurrentContext());
                                                         }))
 
-                        .wrap((t, ctx) -> {
-                            var item = new TransactionItem(t);
-                            return item;
-                        });
+                        .wrap(TransactionItem::new);
     }
 
     private void addTaxDistributionEquivalentIncomeTransaction()
@@ -3691,10 +3685,7 @@ public class TradeRepublicPDFExtractor extends AbstractPDFExtractor
                                                             t.setAmount(asAmount(v.get("amount")));
                                                         }))
 
-                        .wrap((t, ctx) -> {
-                            var item = new TransactionItem(t);
-                            return item;
-                        });
+                        .wrap(TransactionItem::new);
     }
 
     private void addDepositStatementTransaction()
@@ -4189,10 +4180,7 @@ public class TradeRepublicPDFExtractor extends AbstractPDFExtractor
                                                             t.setAmount(0L);
                                                         }))
 
-                        .wrap((t, ctx) -> {
-                            var item = new TransactionItem(t);
-                            return item;
-                        });
+                        .wrap(TransactionItem::new);
     }
 
     private void addBuySellTaxReturnBlock(DocumentType type)
