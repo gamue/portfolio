@@ -903,7 +903,7 @@ public class INGDiBaPDFExtractor extends AbstractPDFExtractor
                                                         .match("^Kurs (?<currency>[A-Z]{3}) [\\.,\\d]+$") //
                                                         .match("^Ausf.hrungstag (?<date>[\\d]{2}\\.[\\d]{2}\\.[\\d]{4})$") //
                                                         .assign((t, v) -> {
-                                                            v.getTransactionContext().put(FAILURE, Messages.MsgErrorTransactionTypeNotSupportedOrRequired);
+                                                            v.markAsFailure(Messages.MsgErrorTransactionTypeNotSupportedOrRequired);
 
                                                             t.setDateTime(asDate(v.get("date")));
                                                             t.setShares(asShares(v.get("shares")));
@@ -923,7 +923,7 @@ public class INGDiBaPDFExtractor extends AbstractPDFExtractor
                                                         .match("^(?<nameContinued>.*)$") //
                                                         .match("^ISIN \\(WKN\\): (?<isin>[A-Z]{2}[A-Z0-9]{9}[0-9]) \\((?<wkn>[A-Z0-9]{6})\\)$") //
                                                         .assign((t, v) -> {
-                                                            v.getTransactionContext().put(FAILURE, Messages.MsgErrorTransactionTypeNotSupportedOrRequired);
+                                                            v.markAsFailure(Messages.MsgErrorTransactionTypeNotSupportedOrRequired);
 
                                                             t.setDateTime(asDate(v.get("date")));
                                                             t.setShares(asShares(v.get("shares")));
@@ -938,16 +938,9 @@ public class INGDiBaPDFExtractor extends AbstractPDFExtractor
                         // @formatter:on
                         .section("type").optional() //
                         .match("^.*im (?<type>Verh.ltnis) .* WKN [A-Z0-9]{6} .*$") //
-                        .assign((t, v) -> v.getTransactionContext().put(FAILURE, Messages.MsgErrorTransactionSplitUnsupported))
+                        .assign((t, v) -> v.markAsFailure(Messages.MsgErrorTransactionSplitUnsupported))
 
-                        .wrap((t, ctx) -> {
-                            var item = new TransactionItem(t);
-
-                            if (ctx.getString(FAILURE) != null)
-                                item.setFailureMessage(ctx.getString(FAILURE));
-
-                            return item;
-                        });
+                        .wrap(TransactionItem::new);
     }
 
     private <T extends Transaction<?>> void addTaxesSectionsTransaction(T transaction, DocumentType type)
