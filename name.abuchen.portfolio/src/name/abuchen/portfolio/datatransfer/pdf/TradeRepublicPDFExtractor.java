@@ -806,9 +806,6 @@ public class TradeRepublicPDFExtractor extends AbstractPDFExtractor
                             // then the "negative" flag must be removed.
                             type.getCurrentContext().remove("negative");
 
-                            if (ctx.getString(FAILURE) != null)
-                                item.setFailureMessage(ctx.getString(FAILURE));
-
                             return item;
                         });
 
@@ -980,9 +977,6 @@ public class TradeRepublicPDFExtractor extends AbstractPDFExtractor
                             // If we have multiple entries in the document,
                             // then the "negative" flag must be removed.
                             type.getCurrentContext().remove("negative");
-
-                            if (ctx.getString(FAILURE) != null)
-                                item.setFailureMessage(ctx.getString(FAILURE));
 
                             if (t.getCurrencyCode() != null && t.getAmount() != 0)
                                 return new TransactionItem(t);
@@ -1642,7 +1636,7 @@ public class TradeRepublicPDFExtractor extends AbstractPDFExtractor
                         .assign((t, v) -> {
                             var tax = Money.of(asCurrencyCode(v.get("currency")), asAmount(v.get("amount")));
 
-                            if (v.getTransactionContext().getString(FAILURE) == null)
+                            if (v.getTransactionContext().getFailureReason() == null)
                                 t.setMonetaryAmount(t.getMonetaryAmount().subtract(tax));
                         })
 
@@ -1654,7 +1648,7 @@ public class TradeRepublicPDFExtractor extends AbstractPDFExtractor
                         .assign((t, v) -> {
                             var tax = Money.of(asCurrencyCode(v.get("currency")), asAmount(v.get("amount")));
 
-                            if (v.getTransactionContext().getString(FAILURE) == null)
+                            if (v.getTransactionContext().getFailureReason() == null)
                                 t.setMonetaryAmount(t.getMonetaryAmount().subtract(tax));
                         })
 
@@ -1666,7 +1660,7 @@ public class TradeRepublicPDFExtractor extends AbstractPDFExtractor
                         .assign((t, v) -> {
                             var tax = Money.of(asCurrencyCode(v.get("currency")), asAmount(v.get("amount")));
 
-                            if (v.getTransactionContext().getString(FAILURE) == null)
+                            if (v.getTransactionContext().getFailureReason() == null)
                                 t.setMonetaryAmount(t.getMonetaryAmount().subtract(tax));
                         })
 
@@ -1674,9 +1668,6 @@ public class TradeRepublicPDFExtractor extends AbstractPDFExtractor
 
                         .wrap((t, ctx) -> {
                             var item = new TransactionItem(t);
-
-                            if (ctx.getString(FAILURE) != null)
-                                item.setFailureMessage(ctx.getString(FAILURE));
 
                             if (t.getCurrencyCode() != null && t.getAmount() == 0)
                                 item.setFailureMessage(Messages.MsgErrorTransactionTypeNotSupportedOrRequired);
@@ -1787,10 +1778,6 @@ public class TradeRepublicPDFExtractor extends AbstractPDFExtractor
 
                         .wrap((t, ctx) -> {
                             var item = new TransactionItem(t);
-
-                            if (ctx.getString(FAILURE) != null)
-                                item.setFailureMessage(ctx.getString(FAILURE));
-
                             return item;
                         });
     }
@@ -2004,9 +1991,6 @@ public class TradeRepublicPDFExtractor extends AbstractPDFExtractor
 
                         .wrap((t, ctx) -> {
                             var item = new TransactionItem(t);
-
-                            if (ctx.getString(FAILURE) != null)
-                                item.setFailureMessage(ctx.getString(FAILURE));
 
                             if (t.getCurrencyCode() != null && t.getAmount() != 0)
                                 return item;
@@ -3196,9 +3180,6 @@ public class TradeRepublicPDFExtractor extends AbstractPDFExtractor
                         .wrap((t, ctx) -> {
                             var item = new TransactionItem(t);
 
-                            if (ctx.getString(FAILURE) != null)
-                                item.setFailureMessage(ctx.getString(FAILURE));
-
                             if (t.getCurrencyCode() != null && t.getAmount() != 0)
                                 return item;
                             return null;
@@ -3307,9 +3288,6 @@ public class TradeRepublicPDFExtractor extends AbstractPDFExtractor
                         .wrap((t, ctx) -> {
                             var item = new TransactionItem(t);
 
-                            if (ctx.getString(FAILURE) != null)
-                                item.setFailureMessage(ctx.getString(FAILURE));
-
                             if (t.getCurrencyCode() != null && t.getAmount() != 0)
                                 return item;
                             return null;
@@ -3366,9 +3344,6 @@ public class TradeRepublicPDFExtractor extends AbstractPDFExtractor
 
                         .wrap((t, ctx) -> {
                             var item = new TransactionItem(t);
-
-                            if (ctx.getString(FAILURE) != null)
-                                item.setFailureMessage(ctx.getString(FAILURE));
 
                             if (t.getCurrencyCode() != null && t.getAmount() != 0)
                                 return item;
@@ -3652,10 +3627,6 @@ public class TradeRepublicPDFExtractor extends AbstractPDFExtractor
 
                         .wrap((t, ctx) -> {
                             var item = new TransactionItem(t);
-
-                            if (ctx.getString(FAILURE) != null)
-                                item.setFailureMessage(ctx.getString(FAILURE));
-
                             return item;
                         });
     }
@@ -3722,10 +3693,6 @@ public class TradeRepublicPDFExtractor extends AbstractPDFExtractor
 
                         .wrap((t, ctx) -> {
                             var item = new TransactionItem(t);
-
-                            if (ctx.getString(FAILURE) != null)
-                                item.setFailureMessage(ctx.getString(FAILURE));
-
                             return item;
                         });
     }
@@ -4224,10 +4191,6 @@ public class TradeRepublicPDFExtractor extends AbstractPDFExtractor
 
                         .wrap((t, ctx) -> {
                             var item = new TransactionItem(t);
-
-                            if (ctx.getString(FAILURE) != null)
-                                item.setFailureMessage(ctx.getString(FAILURE));
-
                             return item;
                         });
     }
@@ -4958,9 +4921,6 @@ public class TradeRepublicPDFExtractor extends AbstractPDFExtractor
 
                             if (t.getCurrencyCode() != null && t.getAmount() == 0)
                                 return null;
-
-                            if (ctx.getString(FAILURE) != null)
-                                item.setFailureMessage(ctx.getString(FAILURE));
 
                             return item;
                         });

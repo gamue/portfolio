@@ -433,9 +433,6 @@ public class FinTechGroupBankPDFExtractor extends AbstractPDFExtractor
                             // @formatter:on
                             type.getCurrentContext().remove("isPurchaseBonds");
 
-                            if (ctx.getString(FAILURE) != null)
-                                item.setFailureMessage(ctx.getString(FAILURE));
-
                             return item;
                         });
 
@@ -1216,9 +1213,6 @@ public class FinTechGroupBankPDFExtractor extends AbstractPDFExtractor
                             // are processed in a separate transaction.
                             // Finally, we remove the flag.
                             type.getCurrentContext().remove("negative");
-
-                            if (ctx.getString(FAILURE) != null)
-                                item.setFailureMessage(ctx.getString(FAILURE));
 
                             if (t.getCurrencyCode() != null && t.getAmount() != 0)
                                 return item;
@@ -2125,9 +2119,6 @@ public class FinTechGroupBankPDFExtractor extends AbstractPDFExtractor
 
                         .wrap((t, ctx) -> {
                             var item = new TransactionItem(t);
-
-                            if (ctx.getString(FAILURE) != null)
-                                item.setFailureMessage(ctx.getString(FAILURE));
 
                             return item;
                         }));
@@ -3742,9 +3733,6 @@ public class FinTechGroupBankPDFExtractor extends AbstractPDFExtractor
 
                         .wrap((t, ctx) -> {
                             var item = new TransactionItem(t);
-
-                            if (ctx.getString(FAILURE) != null)
-                                item.setFailureMessage(ctx.getString(FAILURE));
 
                             return item;
                         });
