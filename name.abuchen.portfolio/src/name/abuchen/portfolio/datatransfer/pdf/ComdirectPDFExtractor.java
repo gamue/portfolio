@@ -682,9 +682,11 @@ public class ComdirectPDFExtractor extends AbstractPDFExtractor
                         .assign((t, v) -> t.setNote(concatenate(t.getNote(), "R.-Nr.: " + trim(v.get("note")), " | ")))
 
                         .wrap(t -> {
+                            var item = new TransactionItem(t);
                             if (t.getCurrencyCode() != null && t.getAmount() != 0)
-                                return new TransactionItem(t);
-                            return null;
+                                return item;
+
+                            return new SkippedItem(item, Messages.MsgErrorTransactionTypeNotSupportedOrRequired);
                         });
     }
 
