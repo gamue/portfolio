@@ -181,8 +181,8 @@ public class CreditSuisseAGExtractorTest
         assertThat(countAccountTransactions(results), is(0L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(0L));
-        assertThat(countSkippedItems(results), is(0L));
-        assertThat(results.size(), is(2));
+        assertThat(countSkippedItems(results), is(1L));
+        assertThat(results.size(), is(3));
         new AssertImportActions().check(results, "EUR");
 
         // check security
