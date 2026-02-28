@@ -1790,9 +1790,10 @@ public class SBrokerPDFExtractor extends AbstractPDFExtractor
                                                         .assign((t, v) -> t.setNote(trim(v.get("note")))))
 
                         .wrap(t -> {
+                            var item = new TransactionItem(t);
                             if (t.getCurrencyCode() != null && t.getAmount() != 0)
-                                return new TransactionItem(t);
-                            return null;
+                                return item;
+                            return new SkippedItem(item, Messages.MsgErrorTransactionTypeNotSupportedOrRequired);
                         });
     }
 

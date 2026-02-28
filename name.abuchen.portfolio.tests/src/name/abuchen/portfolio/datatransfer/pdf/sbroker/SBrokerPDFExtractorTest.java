@@ -84,8 +84,8 @@ public class SBrokerPDFExtractorTest
         assertThat(countAccountTransactions(results), is(0L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(0L));
-        assertThat(countSkippedItems(results), is(0L));
-        assertThat(results.size(), is(2));
+        assertThat(countSkippedItems(results), is(1L));
+        assertThat(results.size(), is(3));
         new AssertImportActions().check(results, "EUR");
 
         // check security
@@ -134,8 +134,8 @@ public class SBrokerPDFExtractorTest
         assertThat(countAccountTransactions(results), is(0L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(0L));
-        assertThat(countSkippedItems(results), is(0L));
-        assertThat(results.size(), is(2));
+        assertThat(countSkippedItems(results), is(1L));
+        assertThat(results.size(), is(3));
         new AssertImportActions().check(results, "EUR");
 
         // check security
@@ -184,8 +184,8 @@ public class SBrokerPDFExtractorTest
         assertThat(countAccountTransactions(results), is(0L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(0L));
-        assertThat(countSkippedItems(results), is(0L));
-        assertThat(results.size(), is(2));
+        assertThat(countSkippedItems(results), is(1L));
+        assertThat(results.size(), is(3));
         new AssertImportActions().check(results, "EUR");
 
         // check security
@@ -234,8 +234,8 @@ public class SBrokerPDFExtractorTest
         assertThat(countAccountTransactions(results), is(0L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(0L));
-        assertThat(countSkippedItems(results), is(0L));
-        assertThat(results.size(), is(2));
+        assertThat(countSkippedItems(results), is(1L));
+        assertThat(results.size(), is(3));
         new AssertImportActions().check(results, "EUR");
 
         // check security
@@ -284,8 +284,8 @@ public class SBrokerPDFExtractorTest
         assertThat(countAccountTransactions(results), is(0L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(0L));
-        assertThat(countSkippedItems(results), is(0L));
-        assertThat(results.size(), is(2));
+        assertThat(countSkippedItems(results), is(1L));
+        assertThat(results.size(), is(3));
         new AssertImportActions().check(results, "EUR");
 
         // check security
@@ -334,8 +334,8 @@ public class SBrokerPDFExtractorTest
         assertThat(countAccountTransactions(results), is(0L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(0L));
-        assertThat(countSkippedItems(results), is(0L));
-        assertThat(results.size(), is(2));
+        assertThat(countSkippedItems(results), is(1L));
+        assertThat(results.size(), is(3));
         new AssertImportActions().check(results, "EUR");
 
         // check security
@@ -384,8 +384,8 @@ public class SBrokerPDFExtractorTest
         assertThat(countAccountTransactions(results), is(0L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(0L));
-        assertThat(countSkippedItems(results), is(0L));
-        assertThat(results.size(), is(2));
+        assertThat(countSkippedItems(results), is(1L));
+        assertThat(results.size(), is(3));
         new AssertImportActions().check(results, "EUR");
 
         // check security
@@ -434,8 +434,8 @@ public class SBrokerPDFExtractorTest
         assertThat(countAccountTransactions(results), is(0L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(0L));
-        assertThat(countSkippedItems(results), is(0L));
-        assertThat(results.size(), is(2));
+        assertThat(countSkippedItems(results), is(1L));
+        assertThat(results.size(), is(3));
         new AssertImportActions().check(results, "EUR");
 
         // check security
@@ -484,8 +484,8 @@ public class SBrokerPDFExtractorTest
         assertThat(countAccountTransactions(results), is(0L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(0L));
-        assertThat(countSkippedItems(results), is(0L));
-        assertThat(results.size(), is(2));
+        assertThat(countSkippedItems(results), is(1L));
+        assertThat(results.size(), is(3));
         new AssertImportActions().check(results, "EUR");
 
         // check security
@@ -545,8 +545,8 @@ public class SBrokerPDFExtractorTest
         assertThat(countAccountTransactions(results), is(0L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(0L));
-        assertThat(countSkippedItems(results), is(0L));
-        assertThat(results.size(), is(1));
+        assertThat(countSkippedItems(results), is(1L));
+        assertThat(results.size(), is(2));
         new AssertImportActions().check(results, "EUR");
 
         // check buy sell transaction
@@ -592,8 +592,8 @@ public class SBrokerPDFExtractorTest
         assertThat(countAccountTransactions(results), is(0L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(0L));
-        assertThat(countSkippedItems(results), is(0L));
-        assertThat(results.size(), is(2));
+        assertThat(countSkippedItems(results), is(1L));
+        assertThat(results.size(), is(3));
         new AssertImportActions().check(results, "EUR");
 
         // check security
@@ -642,8 +642,8 @@ public class SBrokerPDFExtractorTest
         assertThat(countAccountTransactions(results), is(0L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(0L));
-        assertThat(countSkippedItems(results), is(0L));
-        assertThat(results.size(), is(2));
+        assertThat(countSkippedItems(results), is(1L));
+        assertThat(results.size(), is(3));
         new AssertImportActions().check(results, "EUR");
 
         // check security
@@ -692,8 +692,8 @@ public class SBrokerPDFExtractorTest
         assertThat(countAccountTransactions(results), is(0L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(0L));
-        assertThat(countSkippedItems(results), is(0L));
-        assertThat(results.size(), is(2));
+        assertThat(countSkippedItems(results), is(1L));
+        assertThat(results.size(), is(3));
         new AssertImportActions().check(results, "EUR");
 
         // check security
@@ -742,8 +742,8 @@ public class SBrokerPDFExtractorTest
         assertThat(countAccountTransactions(results), is(0L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(0L));
-        assertThat(countSkippedItems(results), is(0L));
-        assertThat(results.size(), is(2));
+        assertThat(countSkippedItems(results), is(1L));
+        assertThat(results.size(), is(3));
         new AssertImportActions().check(results, "EUR");
 
         // check security
@@ -775,8 +775,8 @@ public class SBrokerPDFExtractorTest
         assertThat(countAccountTransactions(results), is(0L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(0L));
-        assertThat(countSkippedItems(results), is(0L));
-        assertThat(results.size(), is(2));
+        assertThat(countSkippedItems(results), is(1L));
+        assertThat(results.size(), is(3));
         new AssertImportActions().check(results, "EUR");
 
         // check security
@@ -809,8 +809,8 @@ public class SBrokerPDFExtractorTest
         assertThat(countAccountTransactions(results), is(0L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(0L));
-        assertThat(countSkippedItems(results), is(0L));
-        assertThat(results.size(), is(2));
+        assertThat(countSkippedItems(results), is(1L));
+        assertThat(results.size(), is(3));
         new AssertImportActions().check(results, "EUR");
 
         // check security
@@ -843,8 +843,8 @@ public class SBrokerPDFExtractorTest
         assertThat(countAccountTransactions(results), is(0L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(0L));
-        assertThat(countSkippedItems(results), is(0L));
-        assertThat(results.size(), is(2));
+        assertThat(countSkippedItems(results), is(1L));
+        assertThat(results.size(), is(3));
         new AssertImportActions().check(results, "EUR");
 
         // check security
@@ -884,8 +884,8 @@ public class SBrokerPDFExtractorTest
         assertThat(countAccountTransactions(results), is(0L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(0L));
-        assertThat(countSkippedItems(results), is(0L));
-        assertThat(results.size(), is(1));
+        assertThat(countSkippedItems(results), is(1L));
+        assertThat(results.size(), is(2));
         new AssertImportActions().check(results, "EUR");
 
         // check buy sell transaction
@@ -978,8 +978,8 @@ public class SBrokerPDFExtractorTest
         assertThat(countAccountTransactions(results), is(0L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(0L));
-        assertThat(countSkippedItems(results), is(0L));
-        assertThat(results.size(), is(2));
+        assertThat(countSkippedItems(results), is(1L));
+        assertThat(results.size(), is(3));
         new AssertImportActions().check(results, "EUR");
 
         // check security
@@ -1094,8 +1094,8 @@ public class SBrokerPDFExtractorTest
         assertThat(countAccountTransactions(results), is(0L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(0L));
-        assertThat(countSkippedItems(results), is(0L));
-        assertThat(results.size(), is(2));
+        assertThat(countSkippedItems(results), is(1L));
+        assertThat(results.size(), is(3));
         new AssertImportActions().check(results, "EUR");
 
         // check security
@@ -1128,8 +1128,8 @@ public class SBrokerPDFExtractorTest
         assertThat(countAccountTransactions(results), is(0L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(0L));
-        assertThat(countSkippedItems(results), is(0L));
-        assertThat(results.size(), is(2));
+        assertThat(countSkippedItems(results), is(1L));
+        assertThat(results.size(), is(3));
         new AssertImportActions().check(results, "EUR");
 
         // check security
