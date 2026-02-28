@@ -1656,8 +1656,8 @@ public class RaiffeisenbankgruppePDFExtractorTest
         assertThat(countAccountTransactions(results), is(17L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(0L));
-        assertThat(countSkippedItems(results), is(18L));
-        assertThat(results.size(), is(35));
+        assertThat(countSkippedItems(results), is(0L));
+        assertThat(results.size(), is(17));
         new AssertImportActions().check(results, "EUR");
 
         // check transaction
@@ -1852,8 +1852,8 @@ public class RaiffeisenbankgruppePDFExtractorTest
         assertThat(countAccountTransactions(results), is(31L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(0L));
-        assertThat(countSkippedItems(results), is(32L));
-        assertThat(results.size(), is(63));
+        assertThat(countSkippedItems(results), is(1L));
+        assertThat(results.size(), is(32));
         new AssertImportActions().check(results, "EUR");
 
         // check transaction
@@ -2187,8 +2187,8 @@ public class RaiffeisenbankgruppePDFExtractorTest
         assertThat(countAccountTransactions(results), is(4L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(0L));
-        assertThat(countSkippedItems(results), is(4L));
-        assertThat(results.size(), is(8));
+        assertThat(countSkippedItems(results), is(0L));
+        assertThat(results.size(), is(4));
         new AssertImportActions().check(results, "EUR");
 
         // check transaction
@@ -2252,8 +2252,8 @@ public class RaiffeisenbankgruppePDFExtractorTest
         assertThat(countAccountTransactions(results), is(4L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(0L));
-        assertThat(countSkippedItems(results), is(4L));
-        assertThat(results.size(), is(8));
+        assertThat(countSkippedItems(results), is(0L));
+        assertThat(results.size(), is(4));
         new AssertImportActions().check(results, "EUR");
 
         // check transaction
@@ -2317,8 +2317,8 @@ public class RaiffeisenbankgruppePDFExtractorTest
         assertThat(countAccountTransactions(results), is(3L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(0L));
-        assertThat(countSkippedItems(results), is(3L));
-        assertThat(results.size(), is(6));
+        assertThat(countSkippedItems(results), is(0L));
+        assertThat(results.size(), is(3));
         new AssertImportActions().check(results, "EUR");
 
         // assert transaction
@@ -2349,8 +2349,8 @@ public class RaiffeisenbankgruppePDFExtractorTest
         assertThat(countAccountTransactions(results), is(7L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(0L));
-        assertThat(countSkippedItems(results), is(14L));
-        assertThat(results.size(), is(21));
+        assertThat(countSkippedItems(results), is(0L));
+        assertThat(results.size(), is(7));
         new AssertImportActions().check(results, "EUR");
 
         // assert transaction
@@ -2401,8 +2401,8 @@ public class RaiffeisenbankgruppePDFExtractorTest
         assertThat(countAccountTransactions(results), is(41L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(0L));
-        assertThat(countSkippedItems(results), is(41L));
-        assertThat(results.size(), is(82));
+        assertThat(countSkippedItems(results), is(0L));
+        assertThat(results.size(), is(41));
         new AssertImportActions().check(results, "EUR");
 
         // assert transaction
@@ -2556,8 +2556,8 @@ public class RaiffeisenbankgruppePDFExtractorTest
         assertThat(countAccountTransactions(results), is(6L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(0L));
-        assertThat(countSkippedItems(results), is(7L));
-        assertThat(results.size(), is(13));
+        assertThat(countSkippedItems(results), is(0L));
+        assertThat(results.size(), is(6));
         new AssertImportActions().check(results, "EUR");
 
         // assert transaction

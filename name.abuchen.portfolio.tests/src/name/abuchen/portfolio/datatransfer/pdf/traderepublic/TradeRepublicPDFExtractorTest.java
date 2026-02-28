@@ -1967,8 +1967,8 @@ public class TradeRepublicPDFExtractorTest
         assertThat(countAccountTransactions(results), is(20L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(1L));
-        assertThat(countSkippedItems(results), is(44L));
-        assertThat(results.size(), is(64));
+        assertThat(countSkippedItems(results), is(0L));
+        assertThat(results.size(), is(20));
         new AssertImportActions().check(results, "EUR");
 
         // assert transaction
@@ -2069,8 +2069,8 @@ public class TradeRepublicPDFExtractorTest
         assertThat(countAccountTransactions(results), is(35L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(1L));
-        assertThat(countSkippedItems(results), is(76L));
-        assertThat(results.size(), is(111));
+        assertThat(countSkippedItems(results), is(0L));
+        assertThat(results.size(), is(35));
         new AssertImportActions().check(results, "EUR");
 
         // assert transaction
@@ -2231,8 +2231,8 @@ public class TradeRepublicPDFExtractorTest
         assertThat(countAccountTransactions(results), is(15L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(4L));
-        assertThat(countSkippedItems(results), is(69L));
-        assertThat(results.size(), is(84));
+        assertThat(countSkippedItems(results), is(0L));
+        assertThat(results.size(), is(15));
         new AssertImportActions().check(results, "EUR");
 
         // assert transaction
@@ -2319,8 +2319,8 @@ public class TradeRepublicPDFExtractorTest
         assertThat(countAccountTransactions(results), is(6L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(1L));
-        assertThat(countSkippedItems(results), is(15L));
-        assertThat(results.size(), is(21));
+        assertThat(countSkippedItems(results), is(0L));
+        assertThat(results.size(), is(6));
         new AssertImportActions().check(results, "EUR");
 
         // assert transaction
@@ -2365,8 +2365,8 @@ public class TradeRepublicPDFExtractorTest
         assertThat(countAccountTransactions(results), is(2L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(1L));
-        assertThat(countSkippedItems(results), is(2L));
-        assertThat(results.size(), is(4));
+        assertThat(countSkippedItems(results), is(0L));
+        assertThat(results.size(), is(2));
         new AssertImportActions().check(results, "EUR");
 
         // assert transaction
@@ -2395,8 +2395,8 @@ public class TradeRepublicPDFExtractorTest
         assertThat(countAccountTransactions(results), is(9L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(3L));
-        assertThat(countSkippedItems(results), is(12L));
-        assertThat(results.size(), is(21));
+        assertThat(countSkippedItems(results), is(0L));
+        assertThat(results.size(), is(9));
         new AssertImportActions().check(results, "EUR");
 
         // assert transaction
@@ -2457,8 +2457,8 @@ public class TradeRepublicPDFExtractorTest
         assertThat(countAccountTransactions(results), is(12L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(2L));
-        assertThat(countSkippedItems(results), is(12L));
-        assertThat(results.size(), is(24));
+        assertThat(countSkippedItems(results), is(0L));
+        assertThat(results.size(), is(12));
         new AssertImportActions().check(results, "EUR");
 
         // assert transaction
@@ -2529,8 +2529,8 @@ public class TradeRepublicPDFExtractorTest
         assertThat(countAccountTransactions(results), is(12L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(0L));
-        assertThat(countSkippedItems(results), is(33L));
-        assertThat(results.size(), is(45));
+        assertThat(countSkippedItems(results), is(0L));
+        assertThat(results.size(), is(12));
         new AssertImportActions().check(results, "EUR");
 
         // assert transaction
@@ -2597,8 +2597,8 @@ public class TradeRepublicPDFExtractorTest
         assertThat(countAccountTransactions(results), is(5L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(0L));
-        assertThat(countSkippedItems(results), is(9L));
-        assertThat(results.size(), is(14));
+        assertThat(countSkippedItems(results), is(0L));
+        assertThat(results.size(), is(5));
         new AssertImportActions().check(results, "EUR");
 
         // assert transaction
@@ -2637,8 +2637,8 @@ public class TradeRepublicPDFExtractorTest
         assertThat(countAccountTransactions(results), is(6L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(1L));
-        assertThat(countSkippedItems(results), is(623L));
-        assertThat(results.size(), is(629));
+        assertThat(countSkippedItems(results), is(0L));
+        assertThat(results.size(), is(6));
         new AssertImportActions().check(results, "EUR");
 
         // assert transaction
@@ -2683,8 +2683,8 @@ public class TradeRepublicPDFExtractorTest
         assertThat(countAccountTransactions(results), is(4L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(0L));
-        assertThat(countSkippedItems(results), is(8L));
-        assertThat(results.size(), is(12));
+        assertThat(countSkippedItems(results), is(0L));
+        assertThat(results.size(), is(4));
         new AssertImportActions().check(results, "EUR");
 
         // assert transaction
@@ -2719,8 +2719,8 @@ public class TradeRepublicPDFExtractorTest
         assertThat(countAccountTransactions(results), is(1L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(0L));
-        assertThat(countSkippedItems(results), is(2L));
-        assertThat(results.size(), is(3));
+        assertThat(countSkippedItems(results), is(0L));
+        assertThat(results.size(), is(1));
         new AssertImportActions().check(results, "EUR");
 
         // assert transaction
@@ -2743,8 +2743,8 @@ public class TradeRepublicPDFExtractorTest
         assertThat(countAccountTransactions(results), is(3L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(0L));
-        assertThat(countSkippedItems(results), is(3L));
-        assertThat(results.size(), is(6));
+        assertThat(countSkippedItems(results), is(0L));
+        assertThat(results.size(), is(3));
         new AssertImportActions().check(results, "EUR");
 
         // assert transaction
@@ -2773,8 +2773,8 @@ public class TradeRepublicPDFExtractorTest
         assertThat(countAccountTransactions(results), is(13L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(2L));
-        assertThat(countSkippedItems(results), is(20L));
-        assertThat(results.size(), is(33));
+        assertThat(countSkippedItems(results), is(0L));
+        assertThat(results.size(), is(13));
         new AssertImportActions().check(results, "EUR");
 
         // assert transaction
@@ -2849,8 +2849,8 @@ public class TradeRepublicPDFExtractorTest
         assertThat(countAccountTransactions(results), is(2L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(0L));
-        assertThat(countSkippedItems(results), is(4L));
-        assertThat(results.size(), is(6));
+        assertThat(countSkippedItems(results), is(0L));
+        assertThat(results.size(), is(2));
         new AssertImportActions().check(results, "EUR");
 
         // assert transaction
@@ -2877,8 +2877,8 @@ public class TradeRepublicPDFExtractorTest
         assertThat(countAccountTransactions(results), is(24L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(6L));
-        assertThat(countSkippedItems(results), is(24L));
-        assertThat(results.size(), is(48));
+        assertThat(countSkippedItems(results), is(0L));
+        assertThat(results.size(), is(24));
         new AssertImportActions().check(results, "EUR");
 
         // assert transaction
@@ -3005,8 +3005,8 @@ public class TradeRepublicPDFExtractorTest
         assertThat(countAccountTransactions(results), is(1L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(0L));
-        assertThat(countSkippedItems(results), is(9L));
-        assertThat(results.size(), is(10));
+        assertThat(countSkippedItems(results), is(0L));
+        assertThat(results.size(), is(1));
         new AssertImportActions().check(results, "EUR");
 
         // assert transaction
@@ -3029,8 +3029,8 @@ public class TradeRepublicPDFExtractorTest
         assertThat(countAccountTransactions(results), is(4L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(1L));
-        assertThat(countSkippedItems(results), is(13L));
-        assertThat(results.size(), is(17));
+        assertThat(countSkippedItems(results), is(0L));
+        assertThat(results.size(), is(4));
         new AssertImportActions().check(results, "EUR");
 
         // assert transaction
@@ -3067,8 +3067,8 @@ public class TradeRepublicPDFExtractorTest
         assertThat(countAccountTransactions(results), is(3L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(0L));
-        assertThat(countSkippedItems(results), is(3L));
-        assertThat(results.size(), is(6));
+        assertThat(countSkippedItems(results), is(0L));
+        assertThat(results.size(), is(3));
         new AssertImportActions().check(results, "EUR");
 
         // assert transaction
@@ -3099,8 +3099,8 @@ public class TradeRepublicPDFExtractorTest
         assertThat(countAccountTransactions(results), is(3L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(0L));
-        assertThat(countSkippedItems(results), is(3L));
-        assertThat(results.size(), is(6));
+        assertThat(countSkippedItems(results), is(0L));
+        assertThat(results.size(), is(3));
         new AssertImportActions().check(results, "EUR");
 
         // assert transaction
@@ -3131,8 +3131,8 @@ public class TradeRepublicPDFExtractorTest
         assertThat(countAccountTransactions(results), is(21L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(2L));
-        assertThat(countSkippedItems(results), is(21L));
-        assertThat(results.size(), is(42));
+        assertThat(countSkippedItems(results), is(0L));
+        assertThat(results.size(), is(21));
         new AssertImportActions().check(results, "EUR");
 
         // assert transaction
@@ -3239,8 +3239,8 @@ public class TradeRepublicPDFExtractorTest
         assertThat(countAccountTransactions(results), is(55L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(1L));
-        assertThat(countSkippedItems(results), is(5L));
-        assertThat(results.size(), is(60));
+        assertThat(countSkippedItems(results), is(0L));
+        assertThat(results.size(), is(55));
         new AssertImportActions().check(results, "EUR");
 
         // assert transaction
@@ -3493,8 +3493,8 @@ public class TradeRepublicPDFExtractorTest
         assertThat(countAccountTransactions(results), is(2L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(0L));
-        assertThat(countSkippedItems(results), is(5L));
-        assertThat(results.size(), is(7));
+        assertThat(countSkippedItems(results), is(0L));
+        assertThat(results.size(), is(2));
         new AssertImportActions().check(results, "EUR");
 
         // assert transaction
@@ -3521,8 +3521,8 @@ public class TradeRepublicPDFExtractorTest
         assertThat(countAccountTransactions(results), is(61L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(2L));
-        assertThat(countSkippedItems(results), is(155L));
-        assertThat(results.size(), is(216));
+        assertThat(countSkippedItems(results), is(0L));
+        assertThat(results.size(), is(61));
         new AssertImportActions().check(results, "EUR");
 
         // assert transaction
@@ -3785,8 +3785,8 @@ public class TradeRepublicPDFExtractorTest
         assertThat(countAccountTransactions(results), is(15L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(1L));
-        assertThat(countSkippedItems(results), is(3L));
-        assertThat(results.size(), is(18));
+        assertThat(countSkippedItems(results), is(0L));
+        assertThat(results.size(), is(15));
         new AssertImportActions().check(results, "EUR");
 
         // assert transaction
@@ -3867,8 +3867,8 @@ public class TradeRepublicPDFExtractorTest
         assertThat(countAccountTransactions(results), is(1L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(0L));
-        assertThat(countSkippedItems(results), is(1L));
-        assertThat(results.size(), is(2));
+        assertThat(countSkippedItems(results), is(0L));
+        assertThat(results.size(), is(1));
         new AssertImportActions().check(results, "EUR");
 
         // assert transaction
@@ -3891,8 +3891,8 @@ public class TradeRepublicPDFExtractorTest
         assertThat(countAccountTransactions(results), is(4L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(0L));
-        assertThat(countSkippedItems(results), is(4L));
-        assertThat(results.size(), is(8));
+        assertThat(countSkippedItems(results), is(0L));
+        assertThat(results.size(), is(4));
         new AssertImportActions().check(results, "EUR");
 
         // assert transaction
@@ -3924,8 +3924,8 @@ public class TradeRepublicPDFExtractorTest
         assertThat(countAccountTransactions(results), is(4L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(0L));
-        assertThat(countSkippedItems(results), is(7L));
-        assertThat(results.size(), is(11));
+        assertThat(countSkippedItems(results), is(0L));
+        assertThat(results.size(), is(4));
         new AssertImportActions().check(results, "EUR");
 
         // assert transaction
@@ -3957,8 +3957,8 @@ public class TradeRepublicPDFExtractorTest
         assertThat(countAccountTransactions(results), is(2L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(1L));
-        assertThat(countSkippedItems(results), is(5L));
-        assertThat(results.size(), is(7));
+        assertThat(countSkippedItems(results), is(0L));
+        assertThat(results.size(), is(2));
         new AssertImportActions().check(results, "EUR");
 
         // assert transaction
@@ -3986,8 +3986,8 @@ public class TradeRepublicPDFExtractorTest
         assertThat(countAccountTransactions(results), is(3L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(0L));
-        assertThat(countSkippedItems(results), is(7L));
-        assertThat(results.size(), is(10));
+        assertThat(countSkippedItems(results), is(0L));
+        assertThat(results.size(), is(3));
         new AssertImportActions().check(results, "EUR");
 
         // assert transaction
@@ -4016,8 +4016,8 @@ public class TradeRepublicPDFExtractorTest
         assertThat(countAccountTransactions(results), is(2L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(0L));
-        assertThat(countSkippedItems(results), is(2L));
-        assertThat(results.size(), is(4));
+        assertThat(countSkippedItems(results), is(0L));
+        assertThat(results.size(), is(2));
         new AssertImportActions().check(results, "EUR");
 
         // assert transaction
@@ -4043,8 +4043,8 @@ public class TradeRepublicPDFExtractorTest
         assertThat(countAccountTransactions(results), is(2L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(1L));
-        assertThat(countSkippedItems(results), is(5L));
-        assertThat(results.size(), is(7));
+        assertThat(countSkippedItems(results), is(0L));
+        assertThat(results.size(), is(2));
         new AssertImportActions().check(results, "EUR");
 
         // assert transaction
@@ -4096,8 +4096,8 @@ public class TradeRepublicPDFExtractorTest
         assertThat(countAccountTransactions(results), is(3L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(1L));
-        assertThat(countSkippedItems(results), is(5L));
-        assertThat(results.size(), is(8));
+        assertThat(countSkippedItems(results), is(0L));
+        assertThat(results.size(), is(3));
         new AssertImportActions().check(results, "EUR");
 
         assertThat(results, hasItem(withFailureMessage( //
@@ -4130,8 +4130,8 @@ public class TradeRepublicPDFExtractorTest
         assertThat(countAccountTransactions(results), is(9L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(1L));
-        assertThat(countSkippedItems(results), is(11L));
-        assertThat(results.size(), is(20));
+        assertThat(countSkippedItems(results), is(0L));
+        assertThat(results.size(), is(9));
         new AssertImportActions().check(results, "EUR");
 
         // assert transaction
@@ -4188,8 +4188,8 @@ public class TradeRepublicPDFExtractorTest
         assertThat(countAccountTransactions(results), is(6L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(2L));
-        assertThat(countSkippedItems(results), is(37L));
-        assertThat(results.size(), is(43));
+        assertThat(countSkippedItems(results), is(0L));
+        assertThat(results.size(), is(6));
         new AssertImportActions().check(results, "EUR");
 
         // assert transaction
@@ -4236,8 +4236,8 @@ public class TradeRepublicPDFExtractorTest
         assertThat(countAccountTransactions(results), is(4L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(1L));
-        assertThat(countSkippedItems(results), is(300L));
-        assertThat(results.size(), is(304));
+        assertThat(countSkippedItems(results), is(0L));
+        assertThat(results.size(), is(4));
         new AssertImportActions().check(results, "EUR");
 
         // assert transaction
@@ -4274,8 +4274,8 @@ public class TradeRepublicPDFExtractorTest
         assertThat(countAccountTransactions(results), is(5L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(3L));
-        assertThat(countSkippedItems(results), is(126L));
-        assertThat(results.size(), is(131));
+        assertThat(countSkippedItems(results), is(0L));
+        assertThat(results.size(), is(5));
         new AssertImportActions().check(results, "EUR");
 
         // assert transaction
@@ -4320,8 +4320,8 @@ public class TradeRepublicPDFExtractorTest
         assertThat(countAccountTransactions(results), is(110L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(3L));
-        assertThat(countSkippedItems(results), is(36L));
-        assertThat(results.size(), is(146));
+        assertThat(countSkippedItems(results), is(0L));
+        assertThat(results.size(), is(110));
         new AssertImportActions().check(results, "EUR");
 
         // assert transaction
@@ -4778,8 +4778,8 @@ public class TradeRepublicPDFExtractorTest
         assertThat(countAccountTransactions(results), is(255L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(9L));
-        assertThat(countSkippedItems(results), is(108L));
-        assertThat(results.size(), is(363));
+        assertThat(countSkippedItems(results), is(0L));
+        assertThat(results.size(), is(255));
         new AssertImportActions().check(results, "EUR");
 
         // assert transaction
@@ -4900,8 +4900,8 @@ public class TradeRepublicPDFExtractorTest
         assertThat(countAccountTransactions(results), is(19L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(1L));
-        assertThat(countSkippedItems(results), is(7L));
-        assertThat(results.size(), is(26));
+        assertThat(countSkippedItems(results), is(0L));
+        assertThat(results.size(), is(19));
         new AssertImportActions().check(results, "EUR");
 
         // assert transaction
@@ -4990,8 +4990,8 @@ public class TradeRepublicPDFExtractorTest
         assertThat(countAccountTransactions(results), is(2L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(2L));
-        assertThat(countSkippedItems(results), is(8L));
-        assertThat(results.size(), is(10));
+        assertThat(countSkippedItems(results), is(0L));
+        assertThat(results.size(), is(2));
         new AssertImportActions().check(results, "EUR");
 
         // assert transaction
@@ -5023,8 +5023,8 @@ public class TradeRepublicPDFExtractorTest
         assertThat(countAccountTransactions(results), is(5L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(1L));
-        assertThat(countSkippedItems(results), is(1L));
-        assertThat(results.size(), is(6));
+        assertThat(countSkippedItems(results), is(0L));
+        assertThat(results.size(), is(5));
         new AssertImportActions().check(results, "EUR");
 
         // assert transaction
@@ -5065,8 +5065,8 @@ public class TradeRepublicPDFExtractorTest
         assertThat(countAccountTransactions(results), is(3L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(1L));
-        assertThat(countSkippedItems(results), is(1L));
-        assertThat(results.size(), is(4));
+        assertThat(countSkippedItems(results), is(0L));
+        assertThat(results.size(), is(3));
         new AssertImportActions().check(results, "EUR");
 
         // assert transaction
@@ -5099,8 +5099,8 @@ public class TradeRepublicPDFExtractorTest
         assertThat(countAccountTransactions(results), is(6L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(1L));
-        assertThat(countSkippedItems(results), is(6L));
-        assertThat(results.size(), is(12));
+        assertThat(countSkippedItems(results), is(0L));
+        assertThat(results.size(), is(6));
         new AssertImportActions().check(results, "EUR");
 
         // assert transaction
@@ -5145,8 +5145,8 @@ public class TradeRepublicPDFExtractorTest
         assertThat(countAccountTransactions(results), is(8L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(1L));
-        assertThat(countSkippedItems(results), is(7L));
-        assertThat(results.size(), is(15));
+        assertThat(countSkippedItems(results), is(0L));
+        assertThat(results.size(), is(8));
         new AssertImportActions().check(results, "EUR");
 
         // assert transaction
@@ -5199,8 +5199,8 @@ public class TradeRepublicPDFExtractorTest
         assertThat(countAccountTransactions(results), is(4L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(0L));
-        assertThat(countSkippedItems(results), is(8L));
-        assertThat(results.size(), is(12));
+        assertThat(countSkippedItems(results), is(0L));
+        assertThat(results.size(), is(4));
         new AssertImportActions().check(results, "EUR");
 
         // assert transaction
@@ -5235,8 +5235,8 @@ public class TradeRepublicPDFExtractorTest
         assertThat(countAccountTransactions(results), is(9L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(1L));
-        assertThat(countSkippedItems(results), is(19L));
-        assertThat(results.size(), is(28));
+        assertThat(countSkippedItems(results), is(0L));
+        assertThat(results.size(), is(9));
         new AssertImportActions().check(results, "EUR");
 
         // assert transaction
@@ -5293,8 +5293,8 @@ public class TradeRepublicPDFExtractorTest
         assertThat(countAccountTransactions(results), is(3L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(0L));
-        assertThat(countSkippedItems(results), is(6L));
-        assertThat(results.size(), is(9));
+        assertThat(countSkippedItems(results), is(0L));
+        assertThat(results.size(), is(3));
         new AssertImportActions().check(results, "EUR");
 
         // assert transaction

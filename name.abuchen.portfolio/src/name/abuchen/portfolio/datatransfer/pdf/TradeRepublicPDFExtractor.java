@@ -2684,10 +2684,11 @@ public class TradeRepublicPDFExtractor extends AbstractPDFExtractor
                                                         }))
 
                         .wrap(t -> {
-                            var item = new TransactionItem(t);
                             if (t.getCurrencyCode() != null && t.getAmount() != 0)
-                                return item;
-                            return new SkippedItem(item, Messages.MsgErrorTransactionTypeNotSupportedOrRequired);
+                                return new TransactionItem(t);
+
+                            // nothing matched, so might be one of the others
+                            return null;
                         }));
 
         var depositRemovalBlock_Format03 = new Block("^[\\d]{2}[\\s]*$");
@@ -3069,10 +3070,11 @@ public class TradeRepublicPDFExtractor extends AbstractPDFExtractor
                                                         }))
 
                         .wrap(t -> {
-                            var item = new TransactionItem(t);
                             if (t.getCurrencyCode() != null && t.getAmount() != 0)
-                                return item;
-                            return new SkippedItem(item, Messages.MsgErrorTransactionTypeNotSupportedOrRequired);
+                                return new TransactionItem(t);
+
+                            // nothing matched, so might be one of the others
+                            return null;
                         }));
 
         // @formatter:off
@@ -3107,10 +3109,11 @@ public class TradeRepublicPDFExtractor extends AbstractPDFExtractor
                                                         }))
 
                         .wrap(t -> {
-                            var item = new TransactionItem(t);
                             if (t.getCurrencyCode() != null && t.getAmount() != 0)
-                                return item;
-                            return new SkippedItem(item, Messages.MsgErrorTransactionTypeNotSupportedOrRequired);
+                                return new TransactionItem(t);
+
+                            // nothing matched, so might be one of the others
+                            return null;
                         }));
 
         // @formatter:off
@@ -3140,10 +3143,11 @@ public class TradeRepublicPDFExtractor extends AbstractPDFExtractor
                                                         }))
 
                         .wrap(t -> {
-                            var item = new TransactionItem(t);
                             if (t.getCurrencyCode() != null && t.getAmount() != 0)
-                                return item;
-                            return new SkippedItem(item, Messages.MsgErrorTransactionTypeNotSupportedOrRequired);
+                                return new TransactionItem(t);
+
+                            // nothing matched, so might be one of the others
+                            return null;
                         }));
 
 
@@ -3175,6 +3179,8 @@ public class TradeRepublicPDFExtractor extends AbstractPDFExtractor
                         .wrap((t, ctx) -> {
                             if (t.getCurrencyCode() != null && t.getAmount() != 0)
                                 return new TransactionItem(t);
+
+                            // nothing matched, so might be one of the others
                             return null;
                         }));
 
@@ -3281,6 +3287,8 @@ public class TradeRepublicPDFExtractor extends AbstractPDFExtractor
                         .wrap((t, ctx) -> {
                             if (t.getCurrencyCode() != null && t.getAmount() != 0)
                                 return new TransactionItem(t);
+
+                            // nothing matched, so might be one of the others
                             return null;
                         }));
 
@@ -3336,6 +3344,8 @@ public class TradeRepublicPDFExtractor extends AbstractPDFExtractor
                         .wrap((t, ctx) -> {
                             if (t.getCurrencyCode() != null && t.getAmount() != 0)
                                 return new TransactionItem(t);
+
+                            // nothing matched, so might be one of the others
                             return null;
                         }));
 
@@ -3366,10 +3376,11 @@ public class TradeRepublicPDFExtractor extends AbstractPDFExtractor
                                                         }))
 
                         .wrap(t -> {
-                            var item = new TransactionItem(t);
                             if (t.getCurrencyCode() != null && t.getAmount() != 0)
-                                return item;
-                            return new SkippedItem(item, Messages.MsgErrorTransactionTypeNotSupportedOrRequired);
+                                return new TransactionItem(t);
+
+                            // nothing matched, so might be one of the others
+                            return null;
                         }));
 
         // @formatter:off
@@ -3426,10 +3437,11 @@ public class TradeRepublicPDFExtractor extends AbstractPDFExtractor
                                                         }))
 
                         .wrap(t -> {
-                            var item = new TransactionItem(t);
                             if (t.getCurrencyCode() != null && t.getAmount() != 0)
-                                return item;
-                            return new SkippedItem(item, Messages.MsgErrorTransactionTypeNotSupportedOrRequired);
+                                return new TransactionItem(t);
+
+                            // nothing matched, so might be one of the others
+                            return null;
                         }));
     }
 
