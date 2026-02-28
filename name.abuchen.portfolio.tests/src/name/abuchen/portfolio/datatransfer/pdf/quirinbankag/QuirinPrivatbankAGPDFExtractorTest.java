@@ -1222,8 +1222,8 @@ public class QuirinPrivatbankAGPDFExtractorTest
         assertThat(countAccountTransactions(results), is(4L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(0L));
-        assertThat(countSkippedItems(results), is(0L));
-        assertThat(results.size(), is(4));
+        assertThat(countSkippedItems(results), is(1L));
+        assertThat(results.size(), is(5));
         new AssertImportActions().check(results, "EUR");
 
         // check transaction
@@ -1291,8 +1291,8 @@ public class QuirinPrivatbankAGPDFExtractorTest
         assertThat(countAccountTransactions(results), is(43L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(0L));
-        assertThat(countSkippedItems(results), is(0L));
-        assertThat(results.size(), is(43));
+        assertThat(countSkippedItems(results), is(3L));
+        assertThat(results.size(), is(46));
         new AssertImportActions().check(results, "EUR");
 
         // check transaction
@@ -1899,8 +1899,8 @@ public class QuirinPrivatbankAGPDFExtractorTest
         assertThat(countAccountTransactions(results), is(1L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(0L));
-        assertThat(countSkippedItems(results), is(0L));
-        assertThat(results.size(), is(1));
+        assertThat(countSkippedItems(results), is(1L));
+        assertThat(results.size(), is(2));
         new AssertImportActions().check(results, "EUR");
 
         // assert transaction
@@ -1923,8 +1923,8 @@ public class QuirinPrivatbankAGPDFExtractorTest
         assertThat(countAccountTransactions(results), is(3L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(0L));
-        assertThat(countSkippedItems(results), is(0L));
-        assertThat(results.size(), is(3));
+        assertThat(countSkippedItems(results), is(3L));
+        assertThat(results.size(), is(6));
         new AssertImportActions().check(results, "EUR");
 
         // assert transaction

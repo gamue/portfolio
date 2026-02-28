@@ -5,6 +5,7 @@ import static name.abuchen.portfolio.util.TextUtil.trim;
 
 import java.util.Map;
 
+import name.abuchen.portfolio.Messages;
 import name.abuchen.portfolio.datatransfer.ExtrExchangeRate;
 import name.abuchen.portfolio.datatransfer.pdf.PDFParser.Block;
 import name.abuchen.portfolio.datatransfer.pdf.PDFParser.DocumentType;
@@ -228,9 +229,10 @@ public class NIBCBankPDFExtractor extends AbstractPDFExtractor
                 .assign((t, v) -> t.setNote(trim(v.get("note"))))
 
                 .wrap(t -> {
+                    var item = new TransactionItem(t);
                     if (t.getCurrencyCode() != null && t.getAmount() != 0)
-                        return new TransactionItem(t);
-                    return null;
+                        return item;
+                    return new SkippedItem(item, Messages.MsgErrorTransactionTypeNotSupportedOrRequired);
                 }));
     }
 

@@ -1302,8 +1302,8 @@ public class PostfinancePDFExtractorTest
         assertThat(countAccountTransactions(results), is(76L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(0L));
-        assertThat(countSkippedItems(results), is(0L));
-        assertThat(results.size(), is(76));
+        assertThat(countSkippedItems(results), is(228L));
+        assertThat(results.size(), is(304));
         new AssertImportActions().check(results, "CHF");
 
         // check transaction
@@ -2087,8 +2087,8 @@ public class PostfinancePDFExtractorTest
         assertThat(countAccountTransactions(results), is(6L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(0L));
-        assertThat(countSkippedItems(results), is(0L));
-        assertThat(results.size(), is(6));
+        assertThat(countSkippedItems(results), is(18L));
+        assertThat(results.size(), is(24));
         new AssertImportActions().check(results, "CHF");
 
         // check transaction
@@ -2172,8 +2172,8 @@ public class PostfinancePDFExtractorTest
         assertThat(countAccountTransactions(results), is(54L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(0L));
-        assertThat(countSkippedItems(results), is(0L));
-        assertThat(results.size(), is(54));
+        assertThat(countSkippedItems(results), is(174L));
+        assertThat(results.size(), is(228));
         new AssertImportActions().check(results, "CHF");
 
         // check transaction
@@ -2737,8 +2737,8 @@ public class PostfinancePDFExtractorTest
         assertThat(countAccountTransactions(results), is(2L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(0L));
-        assertThat(countSkippedItems(results), is(0L));
-        assertThat(results.size(), is(2));
+        assertThat(countSkippedItems(results), is(6L));
+        assertThat(results.size(), is(8));
         new AssertImportActions().check(results, "CHF");
 
         // check transaction
@@ -2782,8 +2782,8 @@ public class PostfinancePDFExtractorTest
         assertThat(countAccountTransactions(results), is(27L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(0L));
-        assertThat(countSkippedItems(results), is(0L));
-        assertThat(results.size(), is(27));
+        assertThat(countSkippedItems(results), is(97L));
+        assertThat(results.size(), is(124));
         new AssertImportActions().check(results, "CHF");
 
         // assert transaction
@@ -2994,8 +2994,8 @@ public class PostfinancePDFExtractorTest
         assertThat(countAccountTransactions(results), is(1L));
         assertThat(countAccountTransfers(results), is(0L));
         assertThat(countItemsWithFailureMessage(results), is(0L));
-        assertThat(countSkippedItems(results), is(0L));
-        assertThat(results.size(), is(1));
+        assertThat(countSkippedItems(results), is(3L));
+        assertThat(results.size(), is(4));
         new AssertImportActions().check(results, "CHF");
 
         // assert transaction

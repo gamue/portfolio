@@ -1,5 +1,6 @@
 package name.abuchen.portfolio.datatransfer.pdf;
 
+import name.abuchen.portfolio.Messages;
 import name.abuchen.portfolio.datatransfer.pdf.PDFParser.Block;
 import name.abuchen.portfolio.datatransfer.pdf.PDFParser.DocumentType;
 import name.abuchen.portfolio.datatransfer.pdf.PDFParser.Transaction;
@@ -65,10 +66,11 @@ public class N26BankAGPDFExtractor extends AbstractPDFExtractor
                         })
 
                         .wrap(t -> {
+                            var item = new TransactionItem(t);
                             if (t.getCurrencyCode() != null && t.getAmount() != 0)
-                                return new TransactionItem(t);
+                                return item;
 
-                            return null;
+                            return new SkippedItem(item, Messages.MsgErrorTransactionTypeNotSupportedOrRequired);
                         });
     }
 
@@ -149,10 +151,11 @@ public class N26BankAGPDFExtractor extends AbstractPDFExtractor
                                                         }))
 
                         .wrap(t -> {
+                            var item = new TransactionItem(t);
                             if (t.getCurrencyCode() != null && t.getAmount() != 0)
-                                return new TransactionItem(t);
+                                return item;
 
-                            return null;
+                            return new SkippedItem(item, Messages.MsgErrorTransactionTypeNotSupportedOrRequired);
                         });
 
         addTaxesSectionsTransaction(pdfTransaction, type);

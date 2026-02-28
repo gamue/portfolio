@@ -891,9 +891,10 @@ public class RaiffeisenBankgruppePDFExtractor extends AbstractPDFExtractor
                         })
 
                         .wrap(t -> {
+                            var item = new TransactionItem(t);
                             if (t.getCurrencyCode() != null && t.getAmount() != 0)
-                                return new TransactionItem(t);
-                            return null;
+                                return item;
+                            return new SkippedItem(item, Messages.MsgErrorTransactionTypeNotSupportedOrRequired);
                         }));
 
         var interestBlock = new Block("^[\\d]{2}\\.[\\d]{2}\\. [\\d]{2}\\.[\\d]{2}\\. Abschluss.* [S|H]$");
@@ -995,9 +996,10 @@ public class RaiffeisenBankgruppePDFExtractor extends AbstractPDFExtractor
                         })
 
                         .wrap(t -> {
+                            var item = new TransactionItem(t);
                             if (t.getCurrencyCode() != null && t.getAmount() != 0)
-                                return new TransactionItem(t);
-                            return null;
+                                return item;
+                            return new SkippedItem(item, Messages.MsgErrorTransactionTypeNotSupportedOrRequired);
                         }));
 
         var feesBlock = new Block("^[\\d]{2}\\.[\\d]{2}\\. [\\d]{2}\\.[\\d]{2}\\. .* [S|H]$");
@@ -1068,9 +1070,10 @@ public class RaiffeisenBankgruppePDFExtractor extends AbstractPDFExtractor
                         })
 
                         .wrap(t -> {
+                            var item = new TransactionItem(t);
                             if (t.getCurrencyCode() != null && t.getAmount() != 0)
-                                return new TransactionItem(t);
-                            return null;
+                                return item;
+                            return new SkippedItem(item, Messages.MsgErrorTransactionTypeNotSupportedOrRequired);
                         }));
     }
 
